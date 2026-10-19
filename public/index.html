@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlogSphere | Share Your Stories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Blog<span>Sphere</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#blogs">Explore Blogs</a>
+            <button id="loginNavBtn">Login</button>
+            <button id="logoutBtn" class="hidden">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <p class="tagline">YOUR STORIES, YOUR WORLD</p>
+
+            <h1>Ideas Worth <span>Sharing.</span></h1>
+
+            <p>
+                Discover stories, share your knowledge, and connect
+                with a community of curious minds.
+            </p>
+
+            <a href="#blogs" class="primary-btn">Explore Stories →</a>
+        </section>
+
+        <!-- Login and Registration -->
+        <section class="auth-section" id="authSection">
+
+            <div class="section-heading">
+                <h2 id="authTitle">Welcome Back!</h2>
+                <p id="authSubtitle">Login to continue your journey.</p>
+            </div>
+
+            <div class="auth-card">
+
+                <form id="authForm">
+
+                    <div id="nameGroup" class="hidden">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                        >
+                    </div>
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 8 characters"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="authSubmit"
+                        class="primary-btn full-width"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="auth-switch" id="authSwitch">
+                    Don't have an account?
+                    <button type="button" id="switchAuth">Register</button>
+                </p>
+
+                <p id="authMessage" class="message"></p>
+
+            </div>
+        </section>
+
+        <!-- Create Blog Section -->
+        <section class="create-section hidden" id="createSection">
+
+            <div class="section-heading">
+                <h2>Create a Story</h2>
+                <p>Share your thoughts with the world.</p>
+            </div>
+
+            <form id="blogForm" class="blog-form">
+
+                <label for="blogTitle">Blog Title</label>
+                <input
+                    type="text"
+                    id="blogTitle"
+                    maxlength="200"
+                    placeholder="Give your story a title..."
+                    required
+                >
+
+                <label for="blogContent">Your Story</label>
+                <textarea
+                    id="blogContent"
+                    rows="7"
+                    placeholder="Start writing here..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="primary-btn">
+                    Publish Blog
+                </button>
+
+                <p id="blogMessage" class="message"></p>
+
+            </form>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="blogs-section" id="blogs">
+
+            <div class="section-heading">
+                <p class="tagline">THE COMMUNITY</p>
+
+                <h2>Latest Stories</h2>
+
+                <p>Fresh ideas and stories from our community.</p>
+            </div>
+
+            <div id="blogsContainer" class="blogs-grid">
+                <p>Loading blogs...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">Blog<span>Sphere</span></div>
+
+        <p>Share your ideas. Inspire the world.</p>
+
+        <p>© 2026 BlogSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
